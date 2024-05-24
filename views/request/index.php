@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /** @var yii\web\View $this */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Страница заявлений';
+$this->title = 'Заявления';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="request-index">

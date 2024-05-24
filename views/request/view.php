@@ -33,7 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'user_id',
             'status_id',
             'auto_number',
-            'text:ntext',
+            'text:text',
             'created_at',
         ],
     ]) ?>

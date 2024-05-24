@@ -35,12 +35,13 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
         //'brandLabel' => Yii::$app->name,
         'brandLabel' => Html::img('/logo.png', ['width' => '30px']),
         'brandUrl' => Yii::$app->homeUrl,
-        'options' => ['class' => 'navbar-expand-md navbar-dark bg-primary fixed-top']
+        'options' => ['class' => 'navbar-expand-md navbar-dark bg-dark fixed-top']
     ]);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav'],
         'items' => [
             ['label' => 'Регистрация', 'url' => ['/user/create'], 'visible' => Yii::$app->user->isGuest],
+            ['label' => 'О портале', 'url' => ['/site/about'], 'visible' => Yii::$app->user->isGuest],
             ['label' => 'Личный кабинет', 'url' => ['/request/index'], 'visible' => !Yii::$app->user->isGuest],
             ['label' => 'Панель администратора', 'url' => ['/admin'],
                 'visible' => !Yii::$app->user->isGuest && Yii::$app->user->identity->isAdmin()],
@@ -68,10 +69,10 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     </div>
 </main>
 
-<footer id="footer" class="mt-auto py-3 bg-danger ">
+<footer id="footer" class="mt-auto py-3 bg-success ">
     <div class="container">
         <div class="row text-muted ">
-            <div class="col-md-6 text-center text-md-start text-white">&copy; «Нарушениям.Нет» <?= date('Y') ?></div>
+            <div class="col-md-6 text-center text-md-start text-white ">&copy; «Нарушениям.Нет» <?= date('Y') ?></div>
         </div>
     </div>
 </footer>
